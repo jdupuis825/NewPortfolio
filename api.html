@@ -1,0 +1,368 @@
+<!--
+    Title: api.html
+    Author: Jocelyn Dupuis
+    Date: 07/16/2024
+    Description: API Page for Jocelyn Dupuis' Portfolio
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <!-- Gives page a title, links stylesheets and Google font kit to page -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Jocelyn Dupuis</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <!--Body of API Page-->
+    <body>
+        <!-- Bubbles CONTAINER -->
+        <div class="bubbles-container">
+            <!-- First Bubbles Background -->
+            <div class="bubbles">
+                <span style="--i:11;"></span>
+                <span style="--i:12;"></span>
+                <span style="--i:24;"></span>
+                <span style="--i:10;"></span>
+                <span style="--i:14;"></span>
+                <span style="--i:23;"></span>
+                <span style="--i:18;"></span>
+                <span style="--i:16;"></span>
+                <span style="--i:19;"></span>
+                <span style="--i:20;"></span>
+                <span style="--i:22;"></span>
+                <span style="--i:25;"></span>
+                <span style="--i:18;"></span>
+                <span style="--i:21;"></span>
+                <span style="--i:15;"></span>
+                <span style="--i:13;"></span>
+                <span style="--i:26;"></span>
+                <span style="--i:17;"></span>
+                <span style="--i:13;"></span>
+                <span style="--i:28;"></span>
+                <span style="--i:11;"></span>
+                <span style="--i:12;"></span>
+                <span style="--i:24;"></span>
+                <span style="--i:10;"></span>
+                <span style="--i:14;"></span>
+                <span style="--i:23;"></span>
+                <span style="--i:18;"></span>
+                <span style="--i:16;"></span>
+                <span style="--i:19;"></span>
+                <span style="--i:20;"></span>
+                <span style="--i:22;"></span>
+                <span style="--i:25;"></span>
+                <span style="--i:18;"></span>
+                <span style="--i:21;"></span>
+                <span style="--i:15;"></span>
+                <span style="--i:13;"></span>
+                <span style="--i:26;"></span>
+                <span style="--i:17;"></span>
+                <span style="--i:13;"></span>
+                <span style="--i:28;"></span>
+            </div>
+            <!-- End of FIRST Bubbles Background -->
+
+
+
+        <!-- Navbar -->
+        <nav>
+            <div class="left">
+                <a href="index.html">Jocelyn Dupuis</a>
+            </div>
+        
+            <nav>
+                <button class="ham">&#9776;</button>
+            </nav>
+
+            <div class="right">
+                <a href="index.html">
+                    <span>Home</span>
+                </a>
+
+                <a href="Jocelyn-Dupuis-Resume.pdf" target="_blank">
+                    <span>Resume</span>
+                </a>
+
+                <a href="education.html">
+                    <span>Education</span>
+                </a>
+
+                <a href="projects.html">
+                    <span>My Projects</span>
+                </a>
+
+                <a href="api.html">
+                    <span>API Unit Tests</span>
+                </a>
+
+                <a href="#" id="darkMode">
+                    <span id="themeText">Dark Mode</span>
+                </a>
+            </div>
+        </nav>
+        <!-- Navbar Ends -->
+
+
+
+        <main>
+            <!-- API Unit Tests -->
+            <div class="api-header">
+                <h1>API Unit Tests</h1>
+            </div>
+
+            <!-- Container for FIRST List of API Unit Test Images -->
+            <div class="api-container">
+                <div class="grid-equal-columns">
+                    <!-- API Test 1 -->
+                    <div class="api-card">
+                        <div class="card-title"><h4>Composer API GET Test</h4></div>
+                        <div class="card-content">
+                            <div class="api" id="composerGet">
+                                <img src="images/api/Composer-API-GET-test-1.png" alt="Image of Composer API GET Test" width="500" height="425">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- API Test 2 -->
+                    <!--<div class="api-card">
+                        <div class="card-title"><h4>Composer API GET Test</h4></div>
+                        <div class="card-content">
+                            <div class="api" id="nodeTech">
+                                <img src="images/api/Composer-API-GET-test-2.png" alt="Image of Composer API GET Test Two" width="500" height="425">
+                            </div>
+                        </div>
+                    </div>-->
+
+                    <!-- API Test 3 -->
+                    <div class="api-card">
+                        <div class="card-title"><h4>Composer API POST Test</h4></div>
+                        <div class="card-content">
+                            <div class="api" id="composerPost">
+                                <img src="images/api/Composer-API-POST-test-1.png" alt="Image of Composer API POST Test" width="500" height="425">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- API Test 4 -->
+                    <div class="api-card">
+                        <div class="card-title"><h4>Person API POST Test</h4></div>
+                        <div class="card-content">
+                            <div class="api" id="personPost">
+                                <img src="images/api/Person-API-POST-test-1.png" alt="Image of Person API GET Test" width="500" height="425">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- API Test 5 -->
+                    <!--<div class="api-card">
+                        <div class="card-title"><h4>Person API POST Test</h4></div>
+                        <div class="card-content">
+                            <div class="api" id="whatABook">
+                                <img src="images/api/#" alt="Image of Person API POST Test" width="500" height="425">
+                            </div>
+                        </div>
+                    </div>-->
+
+                    <!-- API Test 6 -->
+                    <div class="api-card">
+                        <div class="card-title"><h4>User API POST Create</h4></div>
+                        <div class="card-content">
+                            <div class="api" id="userPostCreate">
+                                <img src="images/api/User-API-POST-create-test.png" alt="Image of User API POST Create Test" width="500" height="425">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- API Test 7 -->
+                    <div class="api-card">
+                        <div class="card-title"><h4>User API POST Login</h4></div>
+                        <div class="card-content">
+                            <div class="api" id="userPostLogin">
+                                <img src="images/api/User-API-POST-login-test.png" alt="Image of User API POST Login Test" width="500" height="425">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- API Test 8 -->
+                    <div class="api-card">
+                        <div class="card-title"><h4>Customer API POST Test</h4></div>
+                        <div class="card-content">
+                            <div class="api" id="customerPost">
+                                <img src="images/api/Customer-API-POST-test.png" alt="Image of Customer API POST Test" width="500" height="425">
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End of equal-grid-columns -->
+            </div>
+            <!-- End of FIRST LIST API Unit Test Images -->
+
+
+        <!-- End of First Bubbles Background-->
+        <!--</div>-->
+
+
+        <!--<div class="bubbles-container">-->
+            <!-- Second Bubbles Background -->
+            <div class="bubbles">
+                <span style="--i:11;"></span>
+                <span style="--i:12;"></span>
+                <span style="--i:24;"></span>
+                <span style="--i:10;"></span>
+                <span style="--i:14;"></span>
+                <span style="--i:23;"></span>
+                <span style="--i:18;"></span>
+                <span style="--i:16;"></span>
+                <span style="--i:19;"></span>
+                <span style="--i:20;"></span>
+                <span style="--i:22;"></span>
+                <span style="--i:25;"></span>
+                <span style="--i:18;"></span>
+                <span style="--i:21;"></span>
+                <span style="--i:15;"></span>
+                <span style="--i:13;"></span>
+                <span style="--i:26;"></span>
+                <span style="--i:17;"></span>
+                <span style="--i:13;"></span>
+                <span style="--i:28;"></span>
+                <span style="--i:11;"></span>
+                <span style="--i:12;"></span>
+                <span style="--i:24;"></span>
+                <span style="--i:10;"></span>
+                <span style="--i:14;"></span>
+                <span style="--i:23;"></span>
+                <span style="--i:18;"></span>
+                <span style="--i:16;"></span>
+                <span style="--i:19;"></span>
+                <span style="--i:20;"></span>
+                <span style="--i:22;"></span>
+                <span style="--i:25;"></span>
+                <span style="--i:18;"></span>
+                <span style="--i:21;"></span>
+                <span style="--i:15;"></span>
+                <span style="--i:13;"></span>
+                <span style="--i:26;"></span>
+                <span style="--i:17;"></span>
+                <span style="--i:13;"></span>
+                <span style="--i:28;"></span>
+            </div>
+            <!-- End of SECOND Bubbles Background-->
+
+
+            <!-- Container for SECOND List of API Unit Test Images -->
+            <div class="api-container">
+                <div class="grid-equal-columns">
+
+                    <!-- API Test 9 -->
+                    <div class="api-card">
+                        <div class="card-title"><h4>Customer Invoice API GET Test</h4></div>
+                        <div class="card-content">
+                            <div class="api" id="customerGet">
+                                <img src="images/api/Customer-API-GET-invoice-test.png" alt="Image of Customer Invoice API GET Test" width="500" height="425">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- API Test 10 -->
+                    <!--<div class="api-card">
+                        <div class="card-title"><h4>Customer Invoice API POST Test</h4></div>
+                        <div class="card-content">
+                            <div class="api" id="teams">
+                                <img src="images/api/#" alt="Image of Customer Invoice API POST Test" width="500" height="425">
+                            </div>
+                        </div>
+                    </div>-->
+
+                    <!-- API Test 11 -->
+                    <div class="api-card">
+                        <div class="card-title"><h4>Composer API PUT Test</h4></div>
+                        <div class="card-content">
+                            <div class="api" id="composerPut">
+                                <img src="images/api/Composer-API-PUT-test.png" alt="Image of Composer API PUT Test" width="500" height="425">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- API Test 12 -->
+                    <!--<div class="api-card">
+                        <div class="card-title"><h4>Composer API DELETE Test</h4></div>
+                        <div class="card-content">
+                            <div class="api" id="teams">
+                                <img src="images/api/#" alt="Image of Composer API DELETE Test" width="500" height="425">
+                            </div>
+                        </div>
+                    </div>-->
+
+
+                    <!-- API Test 13 -->
+                    <div class="api-card">
+                        <div class="card-title"><h4>Teams API GET Test</h4></div>
+                        <div class="card-content">
+                            <div class="api" id="teamsGet">
+                                <img src="images/api/Teams-API-GET-test-1.png" alt="Image of Teams API GET Test" width="500" height="425">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- API Test 14 -->
+                    <div class="api-card">
+                        <div class="card-title"><h4>Teams API POST Test</h4></div>
+                        <div class="card-content">
+                            <div class="api" id="teamsPost">
+                                <img src="images/api/Teams-API-POST-test.png" alt="Image of Teams API POST Test" width="500" height="425">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- API Test 15 -->
+                    <div class="api-card">
+                        <div class="card-title"><h4>Teams API GET Test</h4></div>
+                        <div class="card-content">
+                            <div class="api" id="teamsGet2">
+                                <img src="images/api/Teams-API-GET-test-2.png" alt="Image of Teams API GET Test" width="500" height="425">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- API Test 16 -->
+                    <div class="api-card">
+                        <div class="card-title"><h4>Teams API DELETE Test</h4></div>
+                        <div class="card-content">
+                            <div class="api" id="teamsDelete">
+                                <img src="images/api/Teams-API-DELETE-test.png" alt="Image of Teams API DELETE Test" width="500" height="425">
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End of equal-grid-columns -->
+            </div>
+            <!-- End of SECOND LIST API Unit Test Images -->
+        </main>
+        <br>
+
+        <!-- End of Bubbles Background CONTAINER-->
+        </div>
+
+
+        <!-- Footer -->
+        <footer>
+            <p class="foot">©2024 by Jocelyn Dupuis</p>
+        </footer>
+
+        
+        <!-- Scripts -->
+        <script src="js/script.js"></script>
+
+    </body>
+
+</html>

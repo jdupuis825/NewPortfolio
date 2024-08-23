@@ -1,0 +1,801 @@
+/**
+    Title: styles.css
+    Author: Jocelyn Dupuis
+    Date: 07/01/2024
+    Description: Styling for Jocelyn's Portfolio
+*/
+
+:root {
+    --text-color: #1a1c20;
+    --link-color: #C80F72;
+    --background-color: #dee4f1;
+    --dark-text-color: #ccc5c5;
+    --dark-background-color: #161719;
+    --card-background-color: #eae7e775;
+}
+
+[data-theme="dark"] {
+    --text-color: #ccc5c5;
+    --link-color: #C80F72;
+    --background-color: #161719;
+    --dark-text-color: #1a1c20;
+    --card-background-color: #4d4c4c;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-family: "Oswald", sans-serif;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: dashed; 
+}
+
+
+
+
+/** Headers */
+h2 {
+    color: #117f95;
+}
+
+h3 {
+    color: #C80F72;
+}
+
+
+/** Navbar Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 30px;
+}
+
+nav .left a {
+    color: var(--text-color);
+    font-size: 20px; 
+    font-weight: 500; 
+}
+
+nav .right a {
+    color: var(--text-color);
+    margin: 0 8px; 
+    font-size: 18px;
+}
+
+nav .right a:last-child {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    border-radius: 5px;
+    padding: 5px 10px; 
+    margin-top: -1%;
+}
+
+/*nav .right a span {
+    margin-left: 5px;
+}*/
+
+nav .right a:hover {
+    color: var(--link-color);
+}
+
+
+
+
+/** Hamburger menu */
+.ham {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+nav .right {
+    display: flex;
+}
+
+
+@media (max-width: 600px) {
+    .ham {
+        display: block;
+        /*color: #ccc5c5;*/
+    }
+
+    nav .right {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 10px;
+        background-color: #ffffff; 
+        border: 1.5px solid #cccccc; 
+        border-radius: 5px; 
+        z-index: 2;
+    }
+
+    nav .right a {
+        margin: 10px;
+        color: var(--dark-background-color);
+    }
+
+    nav .right a:last-child {
+        margin-top: 5%;
+    }
+}
+
+
+
+
+/** Home Page Styling - Section 1: Bio */
+.bio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    gap: 40px;
+}
+
+.bio .text {
+    flex: 5;
+}
+
+.bio .text h2 {
+    font-size: 48px; 
+}
+
+.bio .text p {
+    font-size: 22px;
+}
+
+.bio .text .links {
+    margin-top: 32px; 
+}
+
+.bio .text .links a {
+    display: inline-block;
+    padding: 6px 12px; 
+    border: 2px dashed var(--link-color);
+    border-radius: 10px; 
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s; 
+}
+
+.bio .text .links a:hover {
+    color: var(--text-color);
+    border: 2px dashed var(--link-color);
+}
+
+.bio .profile-picture {
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.bio .profile-picture img {
+    width: 350px;
+    border: 3px solid var(--link-color); 
+    border-radius: 10%; 
+    box-shadow: 0 10px 15px 5px #117f95; 
+}
+
+
+
+
+/** Home Page Styling - Section 2: Skills */
+.skills-list {
+    padding: 0 50px;
+    margin-bottom: 30px;
+}
+
+.skills-list h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.skills-list .text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-list .icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-list .icons .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; 
+    width: 200px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 10px;
+}
+
+.skills-list .icons .icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 3px; 
+}
+
+.skills-list .icons .icon span {
+    font-size: 20px; 
+}
+
+
+
+
+/** Home Page Styling - Section 3: Contact */
+
+/* If I decide to incorporate it via JS
+.contact-section {
+    padding: 0 50px;
+    margin-bottom: 22%;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    text-align: center;
+    color: var(--link-color);
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-size: 24px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #117f95;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+.button {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    color: var(--background-color);
+    background-color: #117f95;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif; 
+    transition: background-color 0.3s;
+}*/
+
+
+
+
+/** Education Page Styling */
+.container {
+    display: block;
+    justify-content: space-around;
+    flex: auto;
+    gap: 20px; /*play around with the space between the cards*/
+    max-width: 100%;
+}
+
+.education-container {
+    
+    gap: 20px; /*play around with the space between the cards*/
+}
+
+.education-card { 
+    padding: 2%;
+    transition: 0.4s;
+    background-color: var(--card-background-color);
+    border-radius: 20px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2); 
+}
+
+.education-card:hover {
+    box-shadow: 0 10px 16px 0 #117f95; 
+}
+
+.education-card a {
+    color: var(--text-color);
+}
+
+.education-card p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.education-card h4 {
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+.education-list h1 {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.education-list h2 {
+    color: var(--link-color);
+    text-align: center;
+    font-size: 32px;
+    padding-bottom: 2%;
+}
+
+.education-header h1 {
+    text-align: center;
+    font-size: 45px;
+    padding-bottom: 1%;
+}
+
+
+
+
+/** Projects Page Styling */
+.projects-header h1 {
+    text-align: center;
+    font-size: 45px;
+    padding-bottom: 2%;
+}
+
+.card-container {
+    padding: 2%;
+    border-radius: 20px;
+}
+
+.grid-equal-columns {
+    display: grid;
+    gap: 2rem; 
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+}
+
+/*.grid-2-equal-columns {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+    height: 50vh;
+}*/
+
+/*.grid-2-equal-columns img {
+    place-content: center;
+    border-radius: 20px; 
+    width: 400px;
+}*/
+
+.card {
+    padding: 2%;
+    transition: 0.4s;
+    background-color: var(--card-background-color);
+    border-radius: 20px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2); 
+}
+
+.card-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 400;
+    padding: 7px;
+}
+
+.card-content {
+    text-align: center;
+    font-size: 20px;
+    height: 100%;
+    padding-bottom: 3px; 
+}
+
+.card:hover {
+    box-shadow: 0 10px 16px 0 #117f95; 
+}
+
+@media (max-width: 600px) {
+    .grid-equal-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/** Diagrams section in Projects Page */
+.diagrams-header h1 {
+    text-align: center;
+    font-size: 45px;
+    padding-bottom: 2%;
+}
+
+.diagrams-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; 
+    max-width: 100%;
+    margin-bottom: 5%;
+}
+
+.diagrams-card .card-title h4 {
+    color: var(--link-color);
+}
+
+/**declarations below commented out to eliminate card around diagram image OR ADD img after .diagrams-card below for other styling options*/
+.diagrams-card  {
+    place-content: center;
+    padding: 2% 2%, 2% 2%;
+    /*background-color: var(--card-background-color);*/
+    /*border-radius: 20px;*/
+    /*box-shadow: 0 4px 8px rgba(0,0,0,0.1); /*play around with / add to bio image maybe?*/
+}
+
+.diagram img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    max-width: 600px;
+    max-height: 400px;
+    transform: transform 0.25s ease;
+}
+
+.diagram img:hover {
+    -moz-transform: scale(1.75);
+    --webkit-transform: scale(1.75);
+    transform: scale(1.75);
+}
+
+hr {
+    border: 3px solid #117f95;
+    border-radius: 3px;
+    width: 100%;
+}
+
+
+
+
+/** API Unit Test Page */
+.api-header h1 {
+    text-align: center;
+    font-size: 45px;
+    padding-bottom: 2%;
+}
+
+.api-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; 
+    max-width: 100%;
+    margin-bottom: 5%;
+}
+
+.api-card .card-title h4 {
+    color: var(--link-color);
+}
+
+/**below declarations are commented out to eliminate card around diagram image OR ADD img after .diagrams-card below for other styling options*/
+.api-card  {
+    place-content: center;
+    padding: 2% 2%, 2% 2%;
+    /*background-color: var(--card-background-color);*/
+    /*border-radius: 20px;*/
+    /*box-shadow: 0 4px 8px rgba(0,0,0,0.1); /*play around with / add to bio image maybe?*/
+}
+
+.api img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    max-width: 600px;
+    max-height: 400px;
+    transform: transform 0.25s ease;
+}
+
+.api img:hover {
+    -moz-transform: scale(1.75);
+    --webkit-transform: scale(1.75);
+    transform: scale(1.75);
+}
+
+
+
+
+/** Background Bubbles */
+.bubbles-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+    margin-top: -2%;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #5ec8dd;
+    margin: 0 4px;
+    border-radius: 50%;
+    /*box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #5ec8dd,
+    0 0 100px #5ec8dd;*/
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+    z-index: -1;
+}
+
+.bubbles span:nth-child(even) {
+    background: #e2529f;
+    /*box-shadow: 0 0 0 10px #ff2d7544,
+    0 0 50px #e2529f,
+    0 0 100px #e2529f;*/
+}
+
+@keyframes animate {
+    100%
+    {
+        transform: translateY(-10vh) scale(.60);
+    }
+    50% 
+    {
+        transform: translateY(45vh) scale(.30);
+    }
+    0% 
+    {
+        transform: translateY(100vh) scale(0);
+    }
+}
+
+
+
+
+/** Footer */
+.foot {
+    font-size:15px!important;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+
+
+/** ADD ELEMENTS AS CODED */ 
+/** media screen size */
+@media (max-width: 1400px) {
+    /* Section 1: Bio */
+    .bio .text h2 {
+        font-size: 35px;
+    }
+
+    /* Education */
+    .education-list {
+        padding: 0 20px;
+    }
+
+    /* My Projects */
+    .card-container {
+        padding: 0 20px;
+    }
+
+    .diagrams-container {
+        padding: 0 20px;
+    }
+
+    /*API Page */
+    .api-container {
+        padding: 0 20px;
+    }
+} 
+
+@media (max-width: 850px) {
+    /* Section 1: Bio */
+    .bio .text h2 {
+        font-size: 35px;
+    }
+
+    /* Education */
+    .education-list {
+        padding: 0 20px;;
+    }
+
+    /* My Projects */
+    .card-container {
+        padding: 0 20px;
+    }
+
+    .diagrams-container {
+        padding: 0 20px;
+    }
+
+    /* API Page */
+    .api-container {
+        padding: 0 20px;
+    }
+} 
+
+@media (max-width: 740px) {
+    /* Section 1: Bio */
+    .bio {
+        flex-direction: column-reverse;
+    }
+
+    .bio .profile-picture img {
+        width: 300px;
+    }
+
+    /* Section 3: Contact */
+    .contact-section .group {
+        flex-direction: column;
+    }
+
+    /* Education */
+    .education-list {
+        padding: 0 20px;;
+    }
+
+    /* My Projects */
+    .card-container {
+        padding: 0 20px;
+    }
+
+    .diagrams-container {
+        padding: 0 20px;
+    }
+
+    /* API Page */
+    .api-container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Navbar */
+    nav { 
+        padding: 0 20px;
+    }
+
+    nav .right a {
+        font-size: 22px
+    }
+
+    nav .right a:last-child {
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+
+    nav .right a span {
+        width: auto;
+    }
+
+    /* Section 1: Bio */
+    .bio {
+        padding: 0 20px;
+    }
+    .bio .text h2 {
+        font-size: 30px;
+    }
+
+    /* Section 2: Skills */
+    .skills-list {
+        padding: 0 20px;
+    }
+
+    .skills-list .icons .icon span {
+        font-size: 16px;
+    }
+
+    /* Education */
+    .education-list {
+        padding: 0 20px;;
+    }
+
+    /* My projects */
+    .card-container {
+        padding: 0 20px;
+    }
+
+    .diagrams-container {
+        padding: 0 20px;
+    }
+
+    .diagram img:hover {
+        transform: none;
+    }
+
+    /* API Page */
+    .api-container {
+        padding: 0 20px;
+    }
+
+    .api img:hover {
+        -moz-transform: scale(1.00);
+        --webkit-transform: scale(1.00);
+        transform: scale(1.00);
+    }
+
+    /* Background Bubbles */
+    .bubbles {
+        position: relative;
+        display: flex;
+    }
+    
+    .bubbles span {
+        position: relative;
+        width: 10px;
+        height: 10px;
+        background: #5ec8dd;
+        margin: 0 4px;
+        border-radius: 50%;
+        /*box-shadow: 0 0 0 10px #4fc3dc44,
+        0 0 50px #5ec8dd,
+        0 0 100px #5ec8dd;*/
+        animation: animate 15s linear infinite;
+        animation-duration: calc(125s / var(--i));
+        z-index: -1;
+    }
+    
+    .bubbles span:nth-child(even) {
+        background: #e2529f;
+        /*box-shadow: 0 0 0 10px #ff2d7544,
+        0 0 20px #e2529f,
+        0 0 50px #e2529f;*/
+    }
+    
+    @keyframes animate {
+        0% 
+        {
+            transform: translateY(45vh) scale(0);
+        }
+        50% 
+        {
+            transform: translateY(25vh) scale(.30);
+        }
+        100%
+        {
+            transform: translateY(-10vh) scale(.60);
+        }
+    }
+}
+
+
